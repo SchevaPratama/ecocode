@@ -38,6 +38,10 @@ export default function PlantInfo({ plant }) {
           py={1}
           maxW="100%"
           textAlign="center"
+          wordBreak="break-word"
+          overflowWrap="break-word"
+          whiteSpace="normal" // ✅ allow line breaks
+          display="inline-block" // ✅ override Chakra's inline-flex
         >
           {plant.latin}
         </Badge>
