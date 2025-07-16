@@ -45,10 +45,13 @@ export default function PlantInfo({ plant }) {
           fontSize="md"
           color="gray.700"
           lineHeight="1.7"
+          w="400px" // fixed width
+          wordBreak="break-word"
         >
           {plant.description}
         </Text>
 
+        <Separator borderColor="green.200" />
         <AspectRatio ratio={4 / 3} borderRadius="lg" overflow="hidden">
           <Image
             src={plant.image}
