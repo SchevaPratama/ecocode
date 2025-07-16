@@ -24,32 +24,40 @@ export default function PlantInfo({ plant }) {
       mx="auto"
     >
       <Stack spacing={4}>
-        <Heading size="lg" color="green.700">
+        <Heading textAlign="center" size="lg" color="green.700">
           {plant.name}
         </Heading>
 
         <Badge
-          size="md"
           variant="subtle"
           colorScheme="green"
-          alignSelf="start"
+          alignSelf="center"
           fontStyle="italic"
+          fontSize={{ base: "sm", md: "md", lg: "lg" }}
+          px={{ base: 2, md: 3 }}
+          py={1}
+          maxW="100%"
+          textAlign="center"
         >
           {plant.latin}
         </Badge>
 
         <Separator borderColor="green.200" />
 
-        <Text
-          whiteSpace="pre-line"
-          fontSize="md"
-          color="gray.700"
-          lineHeight="1.7"
-          w="400px" // fixed width
-          wordBreak="break-word"
-        >
-          {plant.description}
-        </Text>
+        <Box w="full" display="flex" justifyContent="center">
+          <Text
+            whiteSpace="pre-line"
+            fontSize="md"
+            color="gray.700"
+            lineHeight="1.7"
+            maxW="600px"
+            w="100%"
+            wordBreak="break-word"
+            overflowWrap="break-word"
+          >
+            {plant.description}
+          </Text>
+        </Box>
 
         <Separator borderColor="green.200" />
         <AspectRatio ratio={4 / 3} borderRadius="lg" overflow="hidden">
